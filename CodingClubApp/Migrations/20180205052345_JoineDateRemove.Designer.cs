@@ -11,9 +11,10 @@ using System;
 namespace CodingClubApp.Migrations
 {
     [DbContext(typeof(CodingClubAppContext))]
-    partial class CodingClubAppContextModelSnapshot : ModelSnapshot
+    [Migration("20180205052345_JoineDateRemove")]
+    partial class JoineDateRemove
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
