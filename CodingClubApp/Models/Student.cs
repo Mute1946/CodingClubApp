@@ -12,5 +12,8 @@ namespace CodingClubApp.Models
         public string StudentID { get; set; }
         public string PhoneNum { get; set; }
         public string Email { get; set; }
+        public DateTime JoinDate { get; set; }
+
+        public ICollection<JoinClub> JoinClubs { get; set; }
     }
 }
