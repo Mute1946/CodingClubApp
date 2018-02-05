@@ -4,12 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using CodingClubApp;
-using CodingClubApp.Data;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using CodingClubApp.Models;
 
 namespace CodingProgramApp
 {
@@ -17,15 +17,16 @@ namespace CodingProgramApp
     {
         public static void Main(string[] args)
         {
-            var host = BuildWebHost(args);
+
+            BuildWebHost(args).Run();
+            /*var host = BuildWebHost(args);
 
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var context = services.GetRequiredService<ClubContext>();
-                    DbInitializer.Initialize(context);
+                    Seed
                 }
                 catch (Exception ex)
                 {
@@ -34,7 +35,7 @@ namespace CodingProgramApp
                 }
             }
 
-            host.Run();
+            host.Run();*/
         }
 
         public static IWebHost BuildWebHost(string[] args) =>

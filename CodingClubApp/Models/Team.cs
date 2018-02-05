@@ -9,6 +9,6 @@ namespace CodingClubApp.Models
         public string TeamName { get; set; }
         public string TeamProject { get; set; }
 
-        public ICollection<JoinClub> Teams { get; set; }
+        //public ICollection<Request> Teams { get; set; }
     }
 }
